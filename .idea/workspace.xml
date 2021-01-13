@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8c197dc-140e-4c3f-b4be-a86c171e8ab3" name="Default Changelist" comment="" />
+    <list default="true" id="a8c197dc-140e-4c3f-b4be-a86c171e8ab3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/repos/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a/storage_v2/_src_/database/studmisto.YmDVig/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a/storage_v2/_src_/database/studmisto.YmDVig/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/AboutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/AboutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/ContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/repos/AboutRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/repos/AboutRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/studmistobackend.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/AboutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/AboutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/ContactController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/NewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/QAController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/QAController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/SliderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/SliderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/AboutItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/AboutItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/ContactCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/ContactCategory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/ContactItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/ContactItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/NewsItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/NewsItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/QAItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/QAItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/SliderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/SliderItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repos/AboutRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/repos/AboutRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repos/ContactRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/repos/ContactRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repos/NewsRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/repos/NewsRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repos/QARepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/repos/QARepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repos/SliderRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/repos/SliderRepo.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +102,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -79,6 +113,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1iYdh0Uz2WxpEUXPGukGSpPRm6M" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -87,9 +122,23 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../takeMyHand" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.studmisto" />
+    </key>
   </component>
   <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -101,12 +150,70 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="CommonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="studmistobackend" />
+      <option name="PACKAGE_NAME" value="com.studmisto.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.studmisto.controllers.CommonTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonTest.commonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="studmistobackend" />
+      <option name="PACKAGE_NAME" value="com.studmisto.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.studmisto.controllers.CommonTest" />
+      <option name="METHOD_NAME" value="commonTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonTest.postTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="studmistobackend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.studmisto.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.studmisto.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.studmisto.controllers.CommonTest" />
+      <option name="METHOD_NAME" value="postTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringApplicationTest.commonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="studmistobackend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.studmisto.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.studmisto" />
+      <option name="MAIN_CLASS_NAME" value="com.studmisto.SpringApplicationTest" />
+      <option name="METHOD_NAME" value="commonTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="studmistobackend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.studmisto.tests.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="studmistobackend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.studmisto.*" />
+          <option name="PATTERN" value="com.studmisto.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,8 +225,33 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.CommonTest.postTest" />
+        <item itemvalue="JUnit.CommonTest" />
+        <item itemvalue="JUnit.CommonTest.commonTest" />
+        <item itemvalue="JUnit.SpringApplicationTest.commonTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <option name="contentProportion" value="0.19262294" />
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@dc36b096" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@dc36b096" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@696fc571" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -132,11 +264,31 @@
       <option name="presentableId" value="Default" />
       <updated>1602088574579</updated>
       <workItem from="1602088579267" duration="12985000" />
-      <workItem from="1602411058141" duration="9051000" />
+      <workItem from="1602411058141" duration="9881000" />
+      <workItem from="1602568877501" duration="13144000" />
+      <workItem from="1602664150734" duration="4494000" />
+      <workItem from="1602735847141" duration="4020000" />
+      <workItem from="1603082146876" duration="2677000" />
+      <workItem from="1603787929148" duration="12920000" />
+      <workItem from="1603972988087" duration="304000" />
+      <workItem from="1610525972531" duration="5232000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -27,10 +27,7 @@ public class AboutController {
     public List<AboutItem> add(@RequestParam("title") String title,
                                @RequestParam("description") String description,
                                @RequestParam("iconLink") String iconLink) {
-        AboutItem aboutItem = new AboutItem();
-        aboutItem.setTitle(title);
-        aboutItem.setDescription(description);
-        aboutItem.setIconLink(iconLink);
+        AboutItem aboutItem = new AboutItem(title, description, iconLink);
         aboutRepo.save(aboutItem);
         return aboutRepo.findAll();
     }
