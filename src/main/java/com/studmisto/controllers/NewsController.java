@@ -1,7 +1,7 @@
 package com.studmisto.controllers;
 
 import com.studmisto.entities.NewsItem;
-import com.studmisto.repos.NewsRepo;
+import com.studmisto.repositories.NewsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

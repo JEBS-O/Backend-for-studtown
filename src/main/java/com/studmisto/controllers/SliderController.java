@@ -1,7 +1,7 @@
 package com.studmisto.controllers;
 
 import com.studmisto.entities.SliderItem;
-import com.studmisto.repos.SliderRepo;
+import com.studmisto.repositories.SliderRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

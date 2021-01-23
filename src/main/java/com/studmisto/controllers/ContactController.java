@@ -1,7 +1,7 @@
 package com.studmisto.controllers;
 
 import com.studmisto.entities.ContactItem;
-import com.studmisto.repos.ContactRepo;
+import com.studmisto.repositories.ContactRepo;
 import com.studmisto.entities.ContactCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

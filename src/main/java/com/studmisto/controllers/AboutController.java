@@ -1,7 +1,7 @@
 package com.studmisto.controllers;
 
 import com.studmisto.entities.AboutItem;
-import com.studmisto.repos.AboutRepo;
+import com.studmisto.repositories.AboutRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

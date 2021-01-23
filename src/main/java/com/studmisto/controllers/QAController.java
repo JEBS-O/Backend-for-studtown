@@ -1,7 +1,7 @@
 package com.studmisto.controllers;
 
 import com.studmisto.entities.QAItem;
-import com.studmisto.repos.QARepo;
+import com.studmisto.repositories.QARepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
