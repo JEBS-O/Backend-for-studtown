@@ -2,48 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8c197dc-140e-4c3f-b4be-a86c171e8ab3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/configuration/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/configuration/authorization/AuthorizationRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/configuration/authorization/AuthorizationRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/configuration/authorization/JwtTokenConfigurer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/configuration/authorization/JwtTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/configuration/authorization/JwtTokenProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Permission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/exceptions/JwtAuthenticationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a/storage_v2/_src_/database/studmisto.YmDVig/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a/storage_v2/_src_/database/studmisto.YmDVig/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Dorm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Institute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Tariff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/config/WebSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/AboutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/AboutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/ContactController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/QAController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/QAController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/SliderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/SliderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/repos/AboutRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/repositories/AboutRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/repos/ContactRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/repositories/ContactRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/repos/NewsRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/repositories/NewsRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/repos/QARepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/repositories/QARepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/repos/SliderRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/repositories/SliderRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/repos/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/repositories/UserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/config/WebSecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/AboutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/AboutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/ContactController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/NewsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/QAController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/QAController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/SliderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/SliderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repos/AboutRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repos/ContactRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repos/NewsRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repos/QARepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repos/SliderRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repos/UserRepo.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,8 +73,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -286,7 +250,7 @@
       <workItem from="1610525972531" duration="6891000" />
       <workItem from="1610612241977" duration="22382000" />
       <workItem from="1610961425210" duration="5527000" />
-      <workItem from="1611142570831" duration="8838000" />
+      <workItem from="1611142570831" duration="11748000" />
     </task>
     <servers />
   </component>

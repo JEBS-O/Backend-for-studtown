@@ -1,10 +1,10 @@
 package com.studmisto.entities;
 
-import org.hibernate.validator.constraints.Length;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import java.util.Collection;
 import java.util.Set;
 
@@ -12,30 +12,64 @@ import java.util.Set;
 @Table(name = "users")
 public class User implements UserDetails {
     @Id
-    private String id;
-    private String name;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+    @Column(name = "first_name")
+    private String firstName;
+    @Column(name = "second_name")
+    private String secondName;
+    @Email
+    @Column(name = "email")
     private String email;
-    private String userpic;
-    @Column(length = 64)
-    private String password;
-    private String gender;
     @Enumerated(EnumType.STRING)
+    @Column(name = "gender")
+    private Gender gender;
+    @Column(name = "group")
+    private String group;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "institute")
+    private Institute institute;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "dorm")
+    private Dorm dorm;
+    @Column(name = "room")
+    private int room;
+    @Column(name = "balance")
+    private double balance;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "tariff")
+    private Tariff tariff;
+    @Column(name = "userpic")
+    private String userpic;
+    @Column(length = 64, name = "password")
+    private String password;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role")
     private Role role;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
     }
 
     public String getEmail() {
@@ -44,6 +78,62 @@ public class User implements UserDetails {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
+    public Institute getInstitute() {
+        return institute;
+    }
+
+    public void setInstitute(Institute institute) {
+        this.institute = institute;
+    }
+
+    public Dorm getDorm() {
+        return dorm;
+    }
+
+    public void setDorm(Dorm dorm) {
+        this.dorm = dorm;
+    }
+
+    public int getRoom() {
+        return room;
+    }
+
+    public void setRoom(int room) {
+        this.room = room;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public Tariff getTariff() {
+        return tariff;
+    }
+
+    public void setTariff(Tariff tariff) {
+        this.tariff = tariff;
     }
 
     public String getUserpic() {
@@ -56,14 +146,6 @@ public class User implements UserDetails {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
     }
 
     public Role getRole() {
@@ -86,7 +168,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return getName();
+        return getFirstName() + getSecondName();
     }
 
     @Override
