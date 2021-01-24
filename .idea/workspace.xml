@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8c197dc-140e-4c3f-b4be-a86c171e8ab3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Dorm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Institute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Tariff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a/storage_v2/_src_/database/studmisto.YmDVig/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a/storage_v2/_src_/database/studmisto.YmDVig/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Dorm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Dorm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Institute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Institute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Tariff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Tariff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Dorm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Dorm.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,17 +217,7 @@
       <serviceView>
         <option name="contentProportion" value="0.19262294" />
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@51b61e70" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@51b61e70" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@23aa3a60" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -250,7 +244,8 @@
       <workItem from="1610525972531" duration="6891000" />
       <workItem from="1610612241977" duration="22382000" />
       <workItem from="1610961425210" duration="5527000" />
-      <workItem from="1611142570831" duration="11748000" />
+      <workItem from="1611142570831" duration="13634000" />
+      <workItem from="1611486189947" duration="523000" />
     </task>
     <servers />
   </component>
