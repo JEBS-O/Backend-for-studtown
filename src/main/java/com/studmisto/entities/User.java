@@ -25,8 +25,8 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     @Column(name = "gender")
     private Gender gender;
-    @Column(name = "group")
-    private String group;
+    @Column(name = "group_name")
+    private String groupName;
     @Enumerated(EnumType.STRING)
     @Column(name = "institute")
     private Institute institute;
@@ -88,12 +88,12 @@ public class User implements UserDetails {
         this.gender = gender;
     }
 
-    public String getGroup() {
-        return group;
+    public String getGroupName() {
+        return groupName;
     }
 
-    public void setGroup(String group) {
-        this.group = group;
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
     }
 
     public Institute getInstitute() {
