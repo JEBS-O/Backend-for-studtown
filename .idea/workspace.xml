@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8c197dc-140e-4c3f-b4be-a86c171e8ab3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a/storage_v2/_src_/database/studmisto.YmDVig/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a/storage_v2/_src_/database/studmisto.YmDVig/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/configuration/CorsConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/configuration/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/configuration/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/studmistobackend.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/configuration/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/configuration/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Dorm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Dorm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Gender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Gender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Institute.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Institute.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Tariff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Tariff.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/snippets/home/curl-request.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/snippets/home/http-request.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/snippets/home/http-response.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/snippets/home/httpie-request.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/snippets/home/request-body.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/snippets/home/response-body.adoc" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,7 +226,7 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@60c7b891" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b270774c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7d5124dc" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -260,7 +256,8 @@
       <workItem from="1610612241977" duration="22382000" />
       <workItem from="1610961425210" duration="5527000" />
       <workItem from="1611142570831" duration="13634000" />
-      <workItem from="1611486189947" duration="4049000" />
+      <workItem from="1611486189947" duration="5422000" />
+      <workItem from="1611492290753" duration="1042000" />
     </task>
     <servers />
   </component>
