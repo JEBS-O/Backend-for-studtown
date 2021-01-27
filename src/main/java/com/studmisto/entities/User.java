@@ -30,9 +30,6 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     @Column(name = "institute")
     private Institute institute;
-    @Enumerated(EnumType.STRING)
-    @Column(name = "dorm")
-    private Dorm dorm;
     @Column(name = "room")
     private int room;
     @Column(name = "balance")
@@ -102,14 +99,6 @@ public class User implements UserDetails {
 
     public void setInstitute(Institute institute) {
         this.institute = institute;
-    }
-
-    public Dorm getDorm() {
-        return dorm;
-    }
-
-    public void setDorm(Dorm dorm) {
-        this.dorm = dorm;
     }
 
     public int getRoom() {

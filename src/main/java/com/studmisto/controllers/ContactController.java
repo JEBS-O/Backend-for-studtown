@@ -1,7 +1,7 @@
 package com.studmisto.controllers;
 
 import com.studmisto.entities.ContactItem;
-import com.studmisto.repositories.ContactRepo;
+import com.studmisto.repositories.ContactRepository;
 import com.studmisto.entities.ContactCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,11 +12,11 @@ import java.util.List;
 @RequestMapping("/contacts")
 public class ContactController {
     @Autowired
-    private ContactRepo contactRepo;
+    private ContactRepository contactRepository;
 
     @GetMapping
     public List<ContactItem> getAllContactItems() {
-        return contactRepo.findAll();
+        return contactRepository.findAll();
     }
 
     @GetMapping("{id}")
@@ -35,8 +35,8 @@ public class ContactController {
     {
         ContactCategory category = ContactCategory.valueOf(categoryName);
         ContactItem contactItem = new ContactItem(category, name, position, address, email, phoneNumber1, phoneNumber2);
-        contactRepo.save(contactItem);
-        return contactRepo.findAll();
+        contactRepository.save(contactItem);
+        return contactRepository.findAll();
     }
 
     @PutMapping("{id}")
@@ -51,14 +51,14 @@ public class ContactController {
         contactItemOld.setEmail(email);
         contactItemOld.setPhoneNumber1(phoneNumber1);
         contactItemOld.setPhoneNumber2(phoneNumber2);
-        contactRepo.save(contactItemOld);
-        return contactRepo.findAll();
+        contactRepository.save(contactItemOld);
+        return contactRepository.findAll();
     }
 
     @DeleteMapping("{id}")
     public List<ContactItem> delete(@PathVariable("id") ContactItem contactItem) {
-        contactRepo.delete(contactItem);
-        return contactRepo.findAll();
+        contactRepository.delete(contactItem);
+        return contactRepository.findAll();
     }
 
 }

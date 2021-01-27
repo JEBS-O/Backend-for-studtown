@@ -1,7 +1,7 @@
 package com.studmisto.controllers;
 
 import com.studmisto.entities.AboutItem;
-import com.studmisto.repositories.AboutRepo;
+import com.studmisto.repositories.AboutRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +11,11 @@ import java.util.List;
 @RequestMapping("/about")
 public class AboutController {
     @Autowired
-    private AboutRepo aboutRepo;
+    private AboutRepository aboutRepository;
 
     @GetMapping
     public List<AboutItem> getAllAboutItems() {
-        return aboutRepo.findAll();
+        return aboutRepository.findAll();
     }
 
     @GetMapping("{id}")
@@ -28,8 +28,8 @@ public class AboutController {
                                @RequestParam("description") String description,
                                @RequestParam("iconLink") String iconLink) {
         AboutItem aboutItem = new AboutItem(title, description, iconLink);
-        aboutRepo.save(aboutItem);
-        return aboutRepo.findAll();
+        aboutRepository.save(aboutItem);
+        return aboutRepository.findAll();
     }
 
     @PutMapping("{id}")
@@ -40,13 +40,13 @@ public class AboutController {
         aboutItemOld.setTitle(title);
         aboutItemOld.setDescription(description);
         aboutItemOld.setIconLink(iconLink);
-        aboutRepo.save(aboutItemOld);
-        return aboutRepo.findAll();
+        aboutRepository.save(aboutItemOld);
+        return aboutRepository.findAll();
     }
 
     @DeleteMapping("{id}")
     public List<AboutItem> delete(@PathVariable("id") AboutItem aboutItem) {
-        aboutRepo.delete(aboutItem);
-        return aboutRepo.findAll();
+        aboutRepository.delete(aboutItem);
+        return aboutRepository.findAll();
     }
 }

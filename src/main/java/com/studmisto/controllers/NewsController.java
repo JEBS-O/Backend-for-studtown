@@ -1,7 +1,7 @@
 package com.studmisto.controllers;
 
 import com.studmisto.entities.NewsItem;
-import com.studmisto.repositories.NewsRepo;
+import com.studmisto.repositories.NewsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,11 +12,11 @@ import java.util.List;
 @RequestMapping("/news")
 public class NewsController {
     @Autowired
-    private NewsRepo newsRepo;
+    private NewsRepository newsRepository;
 
     @GetMapping
     public List<NewsItem> getAllNewsItems() {
-        return newsRepo.findAll();
+        return newsRepository.findAll();
     }
 
     @GetMapping("{id}")
@@ -30,8 +30,8 @@ public class NewsController {
             @RequestParam("description") String description,
             @RequestParam("photoLink") String photoLink) {
         NewsItem newsItem = new NewsItem(title, description, photoLink, new Date());
-        newsRepo.save(newsItem);
-        return newsRepo.findAll();
+        newsRepository.save(newsItem);
+        return newsRepository.findAll();
     }
 
     @PutMapping("{id}")
@@ -42,13 +42,13 @@ public class NewsController {
         newsItemOld.setTitle(title);
         newsItemOld.setDescription(description);
         newsItemOld.setPhotoLink(photoLink);
-        newsRepo.save(newsItemOld);
-        return newsRepo.findAll();
+        newsRepository.save(newsItemOld);
+        return newsRepository.findAll();
     }
 
     @DeleteMapping("{id}")
     public List<NewsItem> delete(@PathVariable("id") NewsItem newsItem) {
-        newsRepo.delete(newsItem);
-        return newsRepo.findAll();
+        newsRepository.delete(newsItem);
+        return newsRepository.findAll();
     }
 }

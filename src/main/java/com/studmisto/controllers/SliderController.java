@@ -1,7 +1,7 @@
 package com.studmisto.controllers;
 
 import com.studmisto.entities.SliderItem;
-import com.studmisto.repositories.SliderRepo;
+import com.studmisto.repositories.SliderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +11,11 @@ import java.util.List;
 @RequestMapping("/slider")
 public class SliderController {
     @Autowired
-    private SliderRepo sliderRepo;
+    private SliderRepository sliderRepository;
 
     @GetMapping
     public List<SliderItem> getAllSliderItems() {
-        return sliderRepo.findAll();
+        return sliderRepository.findAll();
     }
 
     @GetMapping("{id}")
@@ -31,8 +31,8 @@ public class SliderController {
         sliderItem.setTitle(title);
         sliderItem.setDescription(description);
         sliderItem.setPhotoLink(photoLink);
-        sliderRepo.save(sliderItem);
-        return sliderRepo.findAll();
+        sliderRepository.save(sliderItem);
+        return sliderRepository.findAll();
     }
 
     @PutMapping("{id}")
@@ -43,13 +43,13 @@ public class SliderController {
         sliderItemOld.setTitle(title);
         sliderItemOld.setDescription(description);
         sliderItemOld.setPhotoLink(photoLink);
-        sliderRepo.save(sliderItemOld);
-        return sliderRepo.findAll();
+        sliderRepository.save(sliderItemOld);
+        return sliderRepository.findAll();
     }
 
     @DeleteMapping("{id}")
     public List<SliderItem> delete(@PathVariable("id") SliderItem sliderItem) {
-        sliderRepo.delete(sliderItem);
-        return sliderRepo.findAll();
+        sliderRepository.delete(sliderItem);
+        return sliderRepository.findAll();
     }
 }

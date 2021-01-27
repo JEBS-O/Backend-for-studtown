@@ -1,7 +1,7 @@
 package com.studmisto.controllers;
 
 import com.studmisto.entities.QAItem;
-import com.studmisto.repositories.QARepo;
+import com.studmisto.repositories.QARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +11,11 @@ import java.util.List;
 @RequestMapping("/qa")
 public class QAController {
     @Autowired
-    private QARepo qaRepo;
+    private QARepository qaRepository;
 
     @GetMapping
     public List<QAItem> getAllQAItems() {
-        return qaRepo.findAll();
+        return qaRepository.findAll();
     }
 
     @GetMapping("{id}")
@@ -29,8 +29,8 @@ public class QAController {
         QAItem qaItem = new QAItem();
         qaItem.setQuestion(question);
         qaItem.setAnswer(answer);
-        qaRepo.save(qaItem);
-        return qaRepo.findAll();
+        qaRepository.save(qaItem);
+        return qaRepository.findAll();
     }
 
     @PutMapping("{id}")
@@ -39,13 +39,13 @@ public class QAController {
                                @RequestParam("answer") String answer) {
         qaItemOld.setQuestion(question);
         qaItemOld.setAnswer(answer);
-        qaRepo.save(qaItemOld);
-        return qaRepo.findAll();
+        qaRepository.save(qaItemOld);
+        return qaRepository.findAll();
     }
 
     @DeleteMapping("{id}")
     public List<QAItem> delete(@PathVariable("id") QAItem qaItem) {
-        qaRepo.delete(qaItem);
-        return qaRepo.findAll();
+        qaRepository.delete(qaItem);
+        return qaRepository.findAll();
     }
 }
