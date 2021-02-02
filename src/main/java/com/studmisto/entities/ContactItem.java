@@ -1,5 +1,7 @@
 package com.studmisto.entities;
 
+import com.studmisto.entities.enums.ContactCategory;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

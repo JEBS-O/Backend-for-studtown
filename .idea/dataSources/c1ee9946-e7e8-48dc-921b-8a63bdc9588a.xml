@@ -21,9 +21,10 @@
     <database id="5" parent="1" name="studmisto">
       <ObjectId>41148</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>2117</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2318</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|83282|83284|1
+      <Relations>sequence|table|83864|83866|1
+sequence|table|83879|83881|1
 </Relations>
     </database>
     <role id="6" parent="1" name="pg_execute_server_program">
@@ -75,7 +76,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>2118</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2319</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="18" parent="5" name="heap">
@@ -142,370 +143,452 @@
       <SchemaId>11</SchemaId>
     </extension>
     <sequence id="26" parent="17" name="hibernate_sequence">
-      <ObjectId>83240</ObjectId>
-      <StateNumber>2110</StateNumber>
+      <ObjectId>83830</ObjectId>
+      <StateNumber>2294</StateNumber>
       <Owner>postgres</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="27" parent="17" name="users_id_seq">
-      <ObjectId>83282</ObjectId>
-      <StateNumber>2116</StateNumber>
+    <sequence id="27" parent="17" name="rooms_id_seq">
+      <ObjectId>83864</ObjectId>
+      <StateNumber>2299</StateNumber>
       <Owner>postgres</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <table id="28" parent="17" name="about_items">
-      <ObjectId>83242</ObjectId>
+    <sequence id="28" parent="17" name="users_id_seq">
+      <ObjectId>83879</ObjectId>
+      <StateNumber>2301</StateNumber>
       <Owner>postgres</Owner>
-      <StateNumber>2111</StateNumber>
-    </table>
-    <table id="29" parent="17" name="contact_item">
-      <ObjectId>83250</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="29" parent="17" name="about_items">
+      <ObjectId>83832</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2112</StateNumber>
+      <StateNumber>2295</StateNumber>
     </table>
-    <table id="30" parent="17" name="news_items">
-      <ObjectId>83258</ObjectId>
+    <table id="30" parent="17" name="contact_item">
+      <ObjectId>83840</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2113</StateNumber>
+      <StateNumber>2296</StateNumber>
     </table>
-    <table id="31" parent="17" name="qa_items">
-      <ObjectId>83266</ObjectId>
+    <table id="31" parent="17" name="news_items">
+      <ObjectId>83848</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2114</StateNumber>
+      <StateNumber>2297</StateNumber>
     </table>
-    <table id="32" parent="17" name="slider_items">
-      <ObjectId>83274</ObjectId>
+    <table id="32" parent="17" name="qa_items">
+      <ObjectId>83856</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2115</StateNumber>
+      <StateNumber>2298</StateNumber>
     </table>
-    <table id="33" parent="17" name="users">
-      <ObjectId>83284</ObjectId>
+    <table id="33" parent="17" name="rooms">
+      <ObjectId>83866</ObjectId>
       <Outdated>1</Outdated>
       <Owner>postgres</Owner>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2317</StateNumber>
     </table>
-    <column id="34" parent="28" name="id">
+    <table id="34" parent="17" name="slider_items">
+      <ObjectId>83871</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2300</StateNumber>
+    </table>
+    <table id="35" parent="17" name="users">
+      <ObjectId>83881</ObjectId>
+      <Outdated>1</Outdated>
+      <Owner>postgres</Owner>
+      <StateNumber>2314</StateNumber>
+    </table>
+    <column id="36" parent="29" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2111</StateNumber>
+      <StateNumber>2295</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="35" parent="28" name="description">
+    <column id="37" parent="29" name="description">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2111</StateNumber>
+      <StateNumber>2295</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="36" parent="28" name="icon_link">
+    <column id="38" parent="29" name="icon_link">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2111</StateNumber>
+      <StateNumber>2295</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="37" parent="28" name="title">
+    <column id="39" parent="29" name="title">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2111</StateNumber>
+      <StateNumber>2295</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="38" parent="28" name="about_items_pkey">
-      <ObjectId>83248</ObjectId>
-      <StateNumber>2111</StateNumber>
+    <index id="40" parent="29" name="about_items_pkey">
+      <ObjectId>83838</ObjectId>
+      <StateNumber>2295</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="39" parent="28" name="about_items_pkey">
-      <ObjectId>83249</ObjectId>
-      <StateNumber>2111</StateNumber>
+    <key id="41" parent="29" name="about_items_pkey">
+      <ObjectId>83839</ObjectId>
+      <StateNumber>2295</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>about_items_pkey</UnderlyingIndexName>
     </key>
-    <column id="40" parent="29" name="id">
+    <column id="42" parent="30" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2112</StateNumber>
+      <StateNumber>2296</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="41" parent="29" name="address">
+    <column id="43" parent="30" name="address">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2112</StateNumber>
+      <StateNumber>2296</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="42" parent="29" name="category">
+    <column id="44" parent="30" name="category">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>2112</StateNumber>
+      <StateNumber>2296</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="43" parent="29" name="email">
+    <column id="45" parent="30" name="email">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2112</StateNumber>
+      <StateNumber>2296</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="29" name="name">
+    <column id="46" parent="30" name="name">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2112</StateNumber>
+      <StateNumber>2296</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="45" parent="29" name="phone_number1">
+    <column id="47" parent="30" name="phone_number1">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2112</StateNumber>
+      <StateNumber>2296</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="46" parent="29" name="phone_number2">
+    <column id="48" parent="30" name="phone_number2">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2112</StateNumber>
+      <StateNumber>2296</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="47" parent="29" name="position">
+    <column id="49" parent="30" name="position">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2112</StateNumber>
+      <StateNumber>2296</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="48" parent="29" name="contact_item_pkey">
-      <ObjectId>83256</ObjectId>
-      <StateNumber>2112</StateNumber>
+    <index id="50" parent="30" name="contact_item_pkey">
+      <ObjectId>83846</ObjectId>
+      <StateNumber>2296</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="49" parent="29" name="contact_item_pkey">
-      <ObjectId>83257</ObjectId>
-      <StateNumber>2112</StateNumber>
+    <key id="51" parent="30" name="contact_item_pkey">
+      <ObjectId>83847</ObjectId>
+      <StateNumber>2296</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>contact_item_pkey</UnderlyingIndexName>
     </key>
-    <column id="50" parent="30" name="id">
+    <column id="52" parent="31" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2113</StateNumber>
+      <StateNumber>2297</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="51" parent="30" name="date">
+    <column id="53" parent="31" name="date">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>2113</StateNumber>
+      <StateNumber>2297</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="52" parent="30" name="description">
+    <column id="54" parent="31" name="description">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2113</StateNumber>
+      <StateNumber>2297</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="53" parent="30" name="photo_link">
+    <column id="55" parent="31" name="photo_link">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2113</StateNumber>
+      <StateNumber>2297</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="54" parent="30" name="title">
+    <column id="56" parent="31" name="title">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2113</StateNumber>
+      <StateNumber>2297</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="55" parent="30" name="news_items_pkey">
-      <ObjectId>83264</ObjectId>
-      <StateNumber>2113</StateNumber>
+    <index id="57" parent="31" name="news_items_pkey">
+      <ObjectId>83854</ObjectId>
+      <StateNumber>2297</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="56" parent="30" name="news_items_pkey">
-      <ObjectId>83265</ObjectId>
-      <StateNumber>2113</StateNumber>
+    <key id="58" parent="31" name="news_items_pkey">
+      <ObjectId>83855</ObjectId>
+      <StateNumber>2297</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>news_items_pkey</UnderlyingIndexName>
     </key>
-    <column id="57" parent="31" name="id">
+    <column id="59" parent="32" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2114</StateNumber>
+      <StateNumber>2298</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="58" parent="31" name="answer">
+    <column id="60" parent="32" name="answer">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2114</StateNumber>
+      <StateNumber>2298</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="59" parent="31" name="question">
+    <column id="61" parent="32" name="question">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2114</StateNumber>
+      <StateNumber>2298</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="60" parent="31" name="qa_items_pkey">
-      <ObjectId>83272</ObjectId>
-      <StateNumber>2114</StateNumber>
+    <index id="62" parent="32" name="qa_items_pkey">
+      <ObjectId>83862</ObjectId>
+      <StateNumber>2298</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="61" parent="31" name="qa_items_pkey">
-      <ObjectId>83273</ObjectId>
-      <StateNumber>2114</StateNumber>
+    <key id="63" parent="32" name="qa_items_pkey">
+      <ObjectId>83863</ObjectId>
+      <StateNumber>2298</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>qa_items_pkey</UnderlyingIndexName>
     </key>
-    <column id="62" parent="32" name="id">
+    <column id="64" parent="33" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2115</StateNumber>
+      <StateNumber>2299</StateNumber>
       <TypeId>20</TypeId>
+      <IdentityKind>by-default</IdentityKind>
     </column>
-    <column id="63" parent="32" name="description">
+    <column id="65" parent="33" name="dorm">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2115</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2299</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="64" parent="32" name="photo_link">
+    <column id="66" parent="33" name="number">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2115</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2299</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="65" parent="32" name="title">
+    <column id="67" parent="33" name="places">
       <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2299</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="68" parent="33" name="gender">
+      <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2115</StateNumber>
+      <StateNumber>2315</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="66" parent="32" name="slider_items_pkey">
-      <ObjectId>83280</ObjectId>
-      <StateNumber>2115</StateNumber>
+    <column id="69" parent="33" name="room_number">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2316</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="70" parent="33" name="stage">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2317</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="71" parent="33" name="rooms_pkey">
+      <ObjectId>83869</ObjectId>
+      <StateNumber>2299</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="67" parent="32" name="slider_items_pkey">
-      <ObjectId>83281</ObjectId>
-      <StateNumber>2115</StateNumber>
+    <key id="72" parent="33" name="rooms_pkey">
+      <ObjectId>83870</ObjectId>
+      <StateNumber>2299</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>rooms_pkey</UnderlyingIndexName>
+    </key>
+    <column id="73" parent="34" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2300</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="74" parent="34" name="description">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2300</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="75" parent="34" name="photo_link">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2300</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="76" parent="34" name="title">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2300</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="77" parent="34" name="slider_items_pkey">
+      <ObjectId>83877</ObjectId>
+      <StateNumber>2300</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="78" parent="34" name="slider_items_pkey">
+      <ObjectId>83878</ObjectId>
+      <StateNumber>2300</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>slider_items_pkey</UnderlyingIndexName>
     </key>
-    <column id="68" parent="33" name="id">
+    <column id="79" parent="35" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2301</StateNumber>
       <TypeId>20</TypeId>
       <IdentityKind>by-default</IdentityKind>
     </column>
-    <column id="69" parent="33" name="balance">
+    <column id="80" parent="35" name="balance">
       <Position>2</Position>
       <DataType>double precision|0s</DataType>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2301</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="70" parent="33" name="dorm">
+    <column id="81" parent="35" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2301</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="71" parent="33" name="email">
+    <column id="82" parent="35" name="first_name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2301</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="72" parent="33" name="first_name">
+    <column id="83" parent="35" name="gender">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2301</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="73" parent="33" name="gender">
+    <column id="84" parent="35" name="group_name">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2301</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="74" parent="33" name="group_name">
+    <column id="85" parent="35" name="institute">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2301</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="75" parent="33" name="institute">
+    <column id="86" parent="35" name="password">
       <Position>8</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2116</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="76" parent="33" name="password">
-      <Position>9</Position>
       <DataType>varchar(64)|0s</DataType>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2301</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="77" parent="33" name="role">
-      <Position>10</Position>
+    <column id="87" parent="35" name="role">
+      <Position>9</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2301</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="78" parent="33" name="room">
-      <Position>11</Position>
+    <column id="88" parent="35" name="room">
+      <Position>10</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2301</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="79" parent="33" name="second_name">
+    <column id="89" parent="35" name="second_name">
+      <Position>11</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2301</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="90" parent="35" name="tariff">
       <Position>12</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2301</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="80" parent="33" name="tariff">
+    <column id="91" parent="35" name="userpic">
       <Position>13</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2301</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="81" parent="33" name="userpic">
+    <column id="92" parent="35" name="room_id">
       <Position>14</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2116</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>2313</StateNumber>
+      <TypeId>20</TypeId>
     </column>
-    <index id="82" parent="33" name="users_pkey">
-      <ObjectId>83290</ObjectId>
-      <StateNumber>2116</StateNumber>
+    <index id="93" parent="35" name="users_pkey">
+      <ObjectId>83887</ObjectId>
+      <StateNumber>2301</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="83" parent="33" name="users_pkey">
-      <ObjectId>83291</ObjectId>
-      <StateNumber>2116</StateNumber>
+    <key id="94" parent="35" name="users_pkey">
+      <ObjectId>83888</ObjectId>
+      <StateNumber>2301</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
     </key>
+    <foreign-key id="95" parent="35" name="fklp7mqwp35k0xb2vyjw7rsi9gb">
+      <ObjectId>83890</ObjectId>
+      <StateNumber>2314</StateNumber>
+      <ColNames>room_id</ColNames>
+      <RefTableId>83866</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>rooms</RefTableName>
+      <RefKeyName>rooms_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>
