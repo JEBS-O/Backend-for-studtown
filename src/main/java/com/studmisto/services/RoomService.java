@@ -99,7 +99,7 @@ public class RoomService {
 
     public boolean delete(Room room) {
         List<User> usersInRoom = userRepository.findByRoom(room);
-        if(usersInRoom == null) {
+        if(usersInRoom.size()==0) {
             roomRepository.delete(room);
             return true;
         } else {
