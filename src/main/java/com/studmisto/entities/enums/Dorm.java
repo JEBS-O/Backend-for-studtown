@@ -14,13 +14,13 @@ public enum Dorm {
 
     public static Dorm getDorm(String dorm) throws IllegalArgumentException {
         switch (dorm) {
-            case "Гуртожиток №3 (вул. ХХХ1)" :
+            case "Гуртожиток №3" :
                 return DORM_3;
-            case "Гуртожиток №5 (вул. ХХХ1)" :
+            case "Гуртожиток №5" :
                 return DORM_5;
-            case "Гуртожиток №6 (вул. Тичини 8)" :
+            case "Гуртожиток №6" :
                 return DORM_6;
-            case "Гуртожиток №7 (вул. ХХХ1)" :
+            case "Гуртожиток №7" :
                 return DORM_7;
         }
         throw new IllegalArgumentException("Некоректна назва гуртожитку");

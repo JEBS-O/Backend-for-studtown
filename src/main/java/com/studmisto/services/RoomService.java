@@ -28,7 +28,11 @@ public class RoomService {
         answer.put("roomNumber", room.getRoomNumber());
         answer.put("availablePlaces", room.getAvailablePlaces());
         answer.put("places", room.getPlaces());
-        answer.put("gender", room.getGender().getName());
+        if(room.getGender() == null) {
+            answer.put("gender", "Немає");
+        } else {
+            answer.put("gender", room.getGender().getName());
+        }
         return answer;
     }
 
