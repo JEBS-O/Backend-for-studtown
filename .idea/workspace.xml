@@ -2,45 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8c197dc-140e-4c3f-b4be-a86c171e8ab3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/RoomController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/services/RoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a/storage_v2/_src_/database/studmisto.YmDVig/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a/storage_v2/_src_/database/studmisto.YmDVig/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/ContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/RoomController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/ContactCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/ContactCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/ContactItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/ContactItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Dorm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Dorm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Institute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Institute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Tariff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Tariff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/repositories/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/repositories/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Tariff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Tariff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/configuration/authorization/AuthorizationRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/configuration/authorization/AuthorizationRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/ContactController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/studmistobackend.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/ContactCategory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/ContactItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/ContactItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Dorm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Gender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Institute.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Permission.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Tariff.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repositories/RoomRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/repositories/RoomRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/enums/Gender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/enums/Gender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/enums/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/enums/Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/enums/Tariff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/enums/Tariff.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/studmisto-backend-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/studmisto-backend-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/studmisto-backend-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/studmisto-backend-1.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
@@ -281,11 +257,6 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c8560edc" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c8560edc" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7118fa09" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />

@@ -63,14 +63,14 @@ public class RoomController {
         }
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public void changeRoom(@PathVariable("id") Room room,
                            @RequestParam("places") Integer places) {
         room.setPlaces(places);
         roomService.addRoom(room);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity deleteRoom(@PathVariable("id") Room room) {
         if(roomService.delete(room)) {
             return ResponseEntity.ok("Кімната видалена");

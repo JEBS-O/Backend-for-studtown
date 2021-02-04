@@ -22,4 +22,8 @@ public enum Tariff {
         }
         throw new IllegalArgumentException("Некоректна назва тарифу");
     }
+
+    public String getDescription() {
+        return description;
+    }
 }

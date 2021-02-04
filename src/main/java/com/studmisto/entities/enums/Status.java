@@ -1,13 +1,19 @@
 package com.studmisto.entities.enums;
 
 public enum Status {
-    ADMINISTRATION,
-    STAFF_3,
-    STAFF_5,
-    STAFF_6,
-    STAFF_7,
-    WAITING_FOR_ORDER,
-    INMATE;
+    ADMINISTRATION("Адміністрація студмістечка"),
+    STAFF_3("Адміністрація/Персонал гуртожитку №3"),
+    STAFF_5("Адміністрація/Персонал гуртожитку №5"),
+    STAFF_6("Адміністрація/Персонал гуртожитку №6"),
+    STAFF_7("Адміністрація/Персонал гуртожитку №7"),
+    WAITING_FOR_ORDER("Очікування ордеру"),
+    INMATE("Мешканець");
+
+    String name;
+
+    Status(String name) {
+        this.name = name;
+    }
 
     public static Status getStatus(String status) throws IllegalArgumentException {
         switch(status) {
@@ -27,5 +33,9 @@ public enum Status {
                 return WAITING_FOR_ORDER;
         }
         throw new IllegalArgumentException("Некоректний статус");
+    }
+
+    public String getName() {
+        return name;
     }
 }
