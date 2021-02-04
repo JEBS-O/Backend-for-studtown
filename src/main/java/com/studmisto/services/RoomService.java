@@ -9,7 +9,9 @@ import com.studmisto.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class RoomService {
@@ -17,6 +19,18 @@ public class RoomService {
     private RoomRepository roomRepository;
     @Autowired
     private UserRepository userRepository;
+
+    public Map<String, Object> getInformationAboutRoom(Room room) {
+        Map<String, Object> answer = new HashMap<>();
+        answer.put("id", room.getId());
+        answer.put("dorm", room.getDorm().getAddress());
+        answer.put("stage", room.getStage());
+        answer.put("roomNumber", room.getRoomNumber());
+        answer.put("availablePlaces", room.getAvailablePlaces());
+        answer.put("places", room.getPlaces());
+        answer.put("gender", room.getGender().getName());
+        return answer;
+    }
 
     public Room getRoom(Integer roomNumber, Dorm dorm) {
         Room room = roomRepository.findRoomByRoomNumberAndDorm(roomNumber, dorm);

@@ -43,7 +43,8 @@ public class UserService implements UserDetailsService {
         answer.put("status", user.getStatus().getName());
         answer.put("position", user.getPosition());
         answer.put("dorm", user.getRoom().getDorm());
-        answer.put("room", user.getRoom());
+        answer.put("roomNumber", user.getRoom().getRoomNumber());
+        answer.put("balance", user.getBalance());
         answer.put("tariff", user.getTariff().getDescription());
         answer.put("userpic", user.getUserpic());
         return answer;

@@ -5,20 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/RoomController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Tariff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Tariff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Dorm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Dorm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Institute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/Institute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/services/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/services/RoomService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/studmistobackend.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/enums/Gender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/enums/Gender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/enums/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/enums/Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/enums/Tariff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/enums/Tariff.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studmisto-backend-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/studmisto-backend-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studmisto-backend-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/studmisto-backend-1.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -253,15 +243,6 @@
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4ddc7257" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a6557997" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c8560edc" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c8560edc" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@603885b5" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />

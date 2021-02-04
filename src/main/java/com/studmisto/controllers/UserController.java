@@ -5,7 +5,6 @@ import com.studmisto.entities.User;
 import com.studmisto.entities.enums.*;
 import com.studmisto.services.RoomService;
 import com.studmisto.services.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -17,10 +16,13 @@ import java.util.Map;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private RoomService roomService;
+    private final UserService userService;
+    private final RoomService roomService;
+
+    public UserController(UserService userService, RoomService roomService) {
+        this.userService = userService;
+        this.roomService = roomService;
+    }
 
     @GetMapping("/principal")
     public Map<String, Object> getPrincipalUser(@AuthenticationPrincipal User user) {
@@ -240,7 +242,9 @@ public class UserController {
 
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable("id") User user) {
-        roomService.takeRoomFromUser(user, user.getRoom());
+        if(user.getRoom() != null) {
+            roomService.takeRoomFromUser(user, user.getRoom());
+        }
         userService.delete(user);
     }
 }
