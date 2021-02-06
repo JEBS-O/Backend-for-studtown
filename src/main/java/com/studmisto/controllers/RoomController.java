@@ -117,8 +117,8 @@ public class RoomController {
             } else {
                 return Map.of("errorMessage", "Кімната не може бути видалена, поки в ній проживають");
             }
-        } catch (Exception e) {
-            return Map.of("errorMessage", e.getMessage());
+        } catch (NullPointerException e) {
+            return Map.of("errorMessage", "Кімната з таким id не знайдена");
         }
     }
 }

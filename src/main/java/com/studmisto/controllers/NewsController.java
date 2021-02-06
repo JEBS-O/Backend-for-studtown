@@ -2,17 +2,20 @@ package com.studmisto.controllers;
 
 import com.studmisto.entities.NewsItem;
 import com.studmisto.repositories.NewsRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/news")
 public class NewsController {
-    @Autowired
-    private NewsRepository newsRepository;
+    private final NewsRepository newsRepository;
+
+    public NewsController(NewsRepository newsRepository) {
+        this.newsRepository = newsRepository;
+    }
 
     @GetMapping
     public List<NewsItem> getAllNewsItems() {
@@ -25,30 +28,40 @@ public class NewsController {
     }
 
     @PostMapping
-    public List<NewsItem> add(
-            @RequestParam("title") String title,
-            @RequestParam("description") String description,
-            @RequestParam("photoLink") String photoLink) {
-        NewsItem newsItem = new NewsItem(title, description, photoLink, new Date());
+    public Map<String, Object> add(@RequestParam("title") String title,
+                                   @RequestParam("description") String description,
+                                   @RequestParam("photoLink") String photoLink) {
+        NewsItem newsItem = new NewsItem();
+        newsItem.setTitle(title);
+        newsItem.setDescription(description);
+        newsItem.setPhotoLink(photoLink);
         newsRepository.save(newsItem);
-        return newsRepository.findAll();
+        return Map.of("message", "Новину додано");
     }
 
     @PutMapping("{id}")
-    public List<NewsItem> update(@PathVariable("id") NewsItem newsItemOld,
-                                 @RequestParam("title") String title,
-                                 @RequestParam("description") String description,
-                                 @RequestParam("photoLink") String photoLink) {
-        newsItemOld.setTitle(title);
-        newsItemOld.setDescription(description);
-        newsItemOld.setPhotoLink(photoLink);
-        newsRepository.save(newsItemOld);
-        return newsRepository.findAll();
+    public Map<String, Object> update(@PathVariable("id") NewsItem newsItemOld,
+                                      @RequestParam("title") String title,
+                                      @RequestParam("description") String description,
+                                      @RequestParam("photoLink") String photoLink) {
+        try {
+            newsItemOld.setTitle(title);
+            newsItemOld.setDescription(description);
+            newsItemOld.setPhotoLink(photoLink);
+            newsRepository.save(newsItemOld);
+            return Map.of("message", "Новину змінено");
+        } catch(NullPointerException e) {
+            return Map.of("errorMessage", "Новину з таким id не знайдено");
+        }
     }
 
     @DeleteMapping("{id}")
-    public List<NewsItem> delete(@PathVariable("id") NewsItem newsItem) {
-        newsRepository.delete(newsItem);
-        return newsRepository.findAll();
+    public Map<String, Object> delete(@PathVariable("id") NewsItem newsItem) {
+        try {
+            newsRepository.delete(newsItem);
+            return Map.of("message", "Новину видалено");
+        } catch (InvalidDataAccessApiUsageException e) {
+            return Map.of("errorMessage", "Новину з таким id не знайдено");
+        }
     }
 }

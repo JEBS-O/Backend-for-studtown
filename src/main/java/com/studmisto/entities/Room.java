@@ -2,10 +2,12 @@ package com.studmisto.entities;
 
 import com.studmisto.entities.enums.Dorm;
 import com.studmisto.entities.enums.Gender;
+import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
+@Data
 @Table(name = "rooms")
 public class Room {
     @Id
@@ -26,60 +28,4 @@ public class Room {
     @Enumerated(EnumType.STRING)
     @Column(name = "gender")
     private Gender gender;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Integer getRoomNumber() {
-        return roomNumber;
-    }
-
-    public void setRoomNumber(Integer roomNumber) {
-        this.roomNumber = roomNumber;
-    }
-
-    public Integer getStage() {
-        return stage;
-    }
-
-    public void setStage(Integer stage) {
-        this.stage = stage;
-    }
-
-    public Dorm getDorm() {
-        return dorm;
-    }
-
-    public void setDorm(Dorm dorm) {
-        this.dorm = dorm;
-    }
-
-    public Integer getPlaces() {
-        return places;
-    }
-
-    public void setPlaces(Integer places) {
-        this.places = places;
-    }
-
-    public Integer getAvailablePlaces() {
-        return availablePlaces;
-    }
-
-    public void setAvailablePlaces(Integer availablePlaces) {
-        this.availablePlaces = availablePlaces;
-    }
-
-    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
-    }
 }

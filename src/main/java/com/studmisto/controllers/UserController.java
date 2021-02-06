@@ -7,6 +7,7 @@ import com.studmisto.services.RoomService;
 import com.studmisto.services.UserService;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.transaction.TransactionSystemException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -47,13 +48,6 @@ public class UserController {
                                   @RequestParam("position") String position,
                                   @RequestParam("status") String status,
                                   @RequestParam("password") String password) {
-        Map<Object, Object> answer = new HashMap<>();
-        answer.put("firstName", firstName);
-        answer.put("secondName", secondName);
-        answer.put("email", email);
-        answer.put("gender", gender);
-        answer.put("position", position);
-        answer.put("status", status);
         try {
             User user = new User();
             user.setFirstName(firstName);
@@ -65,11 +59,10 @@ public class UserController {
             user.setStatus(Status.getStatus(status));
             user.setPassword(new BCryptPasswordEncoder(12).encode(password));
             userService.save(user);
-            answer.put("message", "Користувач доданий");
-        } catch(IllegalArgumentException e) {
-            answer.put("errorMessage", e.getMessage());
+            return Map.of("message", "Користувач доданий");
+        } catch(IllegalArgumentException | TransactionSystemException e) {
+            return Map.of("errorMessage", e.getMessage());
         }
-        return answer;
     }
 
     @PostMapping("/addExistInmate")
@@ -86,20 +79,6 @@ public class UserController {
                                   @RequestParam("status") String status,
                                   @RequestParam("balance") Double balance,
                                   @RequestParam("tariff") String tariff) {
-        Map<String, Object> answer = new HashMap<>();
-        answer.put("firstName", firstName);
-        answer.put("secondName", secondName);
-        answer.put("email", email);
-        answer.put("gender", gender);
-        answer.put("groupName", groupName);
-        answer.put("institute", institute);
-        answer.put("roomNumber", roomNumber);
-        answer.put("dorm", dorm);
-        answer.put("position", position);
-        answer.put("status", status);
-        answer.put("balance", balance);
-        answer.put("tariff", tariff);
-
         User user = new User();
         try {
             if(roomService.checkRoomForUser(Gender.getGender(gender), roomService.getRoom(roomNumber, Dorm.getDorm(dorm)))) {
@@ -117,18 +96,16 @@ public class UserController {
                 user.setRole(Role.USER);
                 user.setPassword(new BCryptPasswordEncoder(12).encode(password));
                 userService.save(user);
-                answer.put("message", "Користувач доданий");
+                return Map.of("message", "Користувач доданий");
             } else {
-                answer.put("errorMessage", "Користувач не може бути заселений у дану кімнату");
+                return Map.of("errorMessage", "Користувач не може бути заселений у дану кімнату");
             }
-        } catch(NullPointerException | IllegalArgumentException e) {
-            answer.put("errorMessage", e.getMessage());
-        } finally {
+        } catch(NullPointerException | IllegalArgumentException | TransactionSystemException e) {
             if(user.getRoom() != null) {
                 roomService.takeRoomFromUser(user, user.getRoom());
             }
+            return Map.of("errorMessage", e.getMessage());
         }
-        return answer;
     }
 
     @PutMapping("/principal")

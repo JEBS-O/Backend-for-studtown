@@ -2,16 +2,20 @@ package com.studmisto.controllers;
 
 import com.studmisto.entities.AboutItem;
 import com.studmisto.repositories.AboutRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/about")
 public class AboutController {
-    @Autowired
-    private AboutRepository aboutRepository;
+    private final AboutRepository aboutRepository;
+
+    public AboutController(AboutRepository aboutRepository) {
+        this.aboutRepository = aboutRepository;
+    }
 
     @GetMapping
     public List<AboutItem> getAllAboutItems() {
@@ -24,29 +28,40 @@ public class AboutController {
     }
 
     @PostMapping
-    public List<AboutItem> add(@RequestParam("title") String title,
-                               @RequestParam("description") String description,
-                               @RequestParam("iconLink") String iconLink) {
-        AboutItem aboutItem = new AboutItem(title, description, iconLink);
+    public Map<String, Object> add(@RequestParam("title") String title,
+                                   @RequestParam("description") String description,
+                                   @RequestParam("iconLink") String iconLink) {
+        AboutItem aboutItem = new AboutItem();
+        aboutItem.setTitle(title);
+        aboutItem.setDescription(description);
+        aboutItem.setIconLink(iconLink);
         aboutRepository.save(aboutItem);
-        return aboutRepository.findAll();
+        return Map.of("message", "Елемент успішно додано");
     }
 
     @PutMapping("{id}")
-    public List<AboutItem> update(@PathVariable("id") AboutItem aboutItemOld,
+    public Map<String, Object> update(@PathVariable("id") AboutItem aboutItemOld,
                                   @RequestParam("title") String title,
                                   @RequestParam("description") String description,
                                   @RequestParam("iconLink") String iconLink) {
-        aboutItemOld.setTitle(title);
-        aboutItemOld.setDescription(description);
-        aboutItemOld.setIconLink(iconLink);
-        aboutRepository.save(aboutItemOld);
-        return aboutRepository.findAll();
+        try {
+            aboutItemOld.setTitle(title);
+            aboutItemOld.setDescription(description);
+            aboutItemOld.setIconLink(iconLink);
+            aboutRepository.save(aboutItemOld);
+            return Map.of("message", "Елемент успішно змінено");
+        } catch(NullPointerException e) {
+            return Map.of("errorMessage", "Елемент з таким id не знайдено");
+        }
     }
 
     @DeleteMapping("{id}")
-    public List<AboutItem> delete(@PathVariable("id") AboutItem aboutItem) {
-        aboutRepository.delete(aboutItem);
-        return aboutRepository.findAll();
+    public Map<String, Object> delete(@PathVariable("id") AboutItem aboutItem) {
+        try {
+            aboutRepository.delete(aboutItem);
+            return Map.of("message", "Елемент видалено");
+        } catch(InvalidDataAccessApiUsageException e) {
+            return Map.of("errorMessage", "Елемент з таким id не знайдено");
+        }
     }
 }

@@ -1,46 +1,21 @@
 package com.studmisto.entities;
 
+import lombok.Data;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
+@Data
 @Table(name="qa_items")
 public class QAItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long Id;
+    @Column(name = "question")
+    @NotNull
     private String question;
+    @Column(name = "answer")
+    @NotNull
     private String answer;
-
-    public QAItem() {
-
-    }
-
-    public QAItem(String question, String answer) {
-        this.question = question;
-        this.answer = answer;
-    }
-
-    public Long getId() {
-        return Id;
-    }
-
-    public void setId(Long id) {
-        Id = id;
-    }
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-
-    public String getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer;
-    }
 }

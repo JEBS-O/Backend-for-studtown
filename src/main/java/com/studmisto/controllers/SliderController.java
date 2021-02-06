@@ -2,16 +2,20 @@ package com.studmisto.controllers;
 
 import com.studmisto.entities.SliderItem;
 import com.studmisto.repositories.SliderRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/slider")
 public class SliderController {
-    @Autowired
-    private SliderRepository sliderRepository;
+    private final SliderRepository sliderRepository;
+
+    public SliderController(SliderRepository sliderRepository) {
+        this.sliderRepository = sliderRepository;
+    }
 
     @GetMapping
     public List<SliderItem> getAllSliderItems() {
@@ -24,7 +28,7 @@ public class SliderController {
     }
 
     @PostMapping
-    public List<SliderItem> add(@RequestParam("title") String title,
+    public Map<String, Object> add(@RequestParam("title") String title,
                                 @RequestParam("description") String description,
                                 @RequestParam("photoLink") String photoLink) {
         SliderItem sliderItem = new SliderItem();
@@ -32,24 +36,32 @@ public class SliderController {
         sliderItem.setDescription(description);
         sliderItem.setPhotoLink(photoLink);
         sliderRepository.save(sliderItem);
-        return sliderRepository.findAll();
+        return Map.of("message", "Елемент додано");
     }
 
     @PutMapping("{id}")
-    public List<SliderItem> update(@PathVariable("id") SliderItem sliderItemOld,
+    public Map<String, Object> update(@PathVariable("id") SliderItem sliderItemOld,
                                    @RequestParam("title") String title,
                                    @RequestParam("description") String description,
                                    @RequestParam("photoLink") String photoLink) {
-        sliderItemOld.setTitle(title);
-        sliderItemOld.setDescription(description);
-        sliderItemOld.setPhotoLink(photoLink);
-        sliderRepository.save(sliderItemOld);
-        return sliderRepository.findAll();
+        try {
+            sliderItemOld.setTitle(title);
+            sliderItemOld.setDescription(description);
+            sliderItemOld.setPhotoLink(photoLink);
+            sliderRepository.save(sliderItemOld);
+            return Map.of("message", "Елемент додано");
+        } catch(NullPointerException e) {
+            return Map.of("errorMessage", "Елемент з таким id не знайдено");
+        }
     }
 
     @DeleteMapping("{id}")
-    public List<SliderItem> delete(@PathVariable("id") SliderItem sliderItem) {
-        sliderRepository.delete(sliderItem);
-        return sliderRepository.findAll();
+    public Map<String, Object> delete(@PathVariable("id") SliderItem sliderItem) {
+        try {
+            sliderRepository.delete(sliderItem);
+            return Map.of("message", "Елемент видалено");
+        } catch (InvalidDataAccessApiUsageException e) {
+            return Map.of("errorMessage", "Елемент з таким id не знайдено");
+        }
     }
 }
