@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8c197dc-140e-4c3f-b4be-a86c171e8ab3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/configuration/authorization/AuthorizationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/configuration/authorization/AuthorizationRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/AboutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/AboutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/ContactController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/NewsController.java" afterDir="false" />
@@ -11,18 +12,16 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/RoomController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/SliderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/SliderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/AboutItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/AboutItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/ContactItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/ContactItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/NewsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/NewsItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/QAItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/QAItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/SliderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/SliderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/ContactCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/enums/ContactCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/services/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/services/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/configuration/authorization/AuthorizationRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/configuration/authorization/AuthorizationRestController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/AboutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/AboutController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/ContactController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/NewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/QAController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/QAController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/RoomController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/SliderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/SliderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/UserController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +132,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../takeMyHand" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -252,12 +251,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8213a8f4" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b9a2e8c7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8213a8f4" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5e6f1bdf" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b9a2e8c7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7be2577b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -289,7 +288,10 @@
       <workItem from="1611142570831" duration="13634000" />
       <workItem from="1611486189947" duration="4049000" />
       <workItem from="1612527449974" duration="2553000" />
-      <workItem from="1612597137007" duration="5064000" />
+      <workItem from="1612597137007" duration="5888000" />
+      <workItem from="1612685769237" duration="6982000" />
+      <workItem from="1612790668438" duration="3545000" />
+      <workItem from="1612865143078" duration="1957000" />
     </task>
     <servers />
   </component>

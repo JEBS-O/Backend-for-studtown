@@ -5,16 +5,17 @@ import com.studmisto.entities.User;
 import com.studmisto.entities.enums.*;
 import com.studmisto.services.RoomService;
 import com.studmisto.services.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.TransactionSystemException;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @RestController
+@Slf4j
 @RequestMapping("/user")
 public class UserController {
     private final UserService userService;
@@ -41,7 +42,7 @@ public class UserController {
     }
 
     @PostMapping("/addStaff")
-    public Map<Object, Object> addStaff(@RequestParam("firstName") String firstName,
+    public Map<String, Object> addStaff(@RequestParam("firstName") String firstName,
                                   @RequestParam("secondName") String secondName,
                                   @RequestParam("email") String email,
                                   @RequestParam("gender") String gender,
@@ -59,8 +60,10 @@ public class UserController {
             user.setStatus(Status.getStatus(status));
             user.setPassword(new BCryptPasswordEncoder(12).encode(password));
             userService.save(user);
+            log.info("Додана особа адміністрації/персоналу. {} {} {}", user.getUsername(), user.getStatus().getName(), user.getPosition());
             return Map.of("message", "Користувач доданий");
         } catch(IllegalArgumentException | TransactionSystemException e) {
+            log.error("{} при спробі додати особу адміністрації/персоналу", e.getMessage());
             return Map.of("errorMessage", e.getMessage());
         }
     }
@@ -96,14 +99,17 @@ public class UserController {
                 user.setRole(Role.USER);
                 user.setPassword(new BCryptPasswordEncoder(12).encode(password));
                 userService.save(user);
+                log.info("Доданий уже існуючий мешканець гуртожитку. {}, {}, кімната №{}", user.getUsername(), user.getRoom().getDorm().getAddress(), user.getRoom().getRoomNumber());
                 return Map.of("message", "Користувач доданий");
             } else {
+                log.warn("Перевірка кімнати показала, що для користувача {}, {}, кімната №{} недоступна", user.getUsername(), user.getRoom().getDorm().getAddress(), user.getRoom().getRoomNumber());
                 return Map.of("errorMessage", "Користувач не може бути заселений у дану кімнату");
             }
         } catch(NullPointerException | IllegalArgumentException | TransactionSystemException e) {
             if(user.getRoom() != null) {
                 roomService.takeRoomFromUser(user, user.getRoom());
             }
+            log.error("{} при спробі додати існуючого мешканця гуртожитку", e.getMessage());
             return Map.of("errorMessage", e.getMessage());
         }
     }
@@ -140,6 +146,7 @@ public class UserController {
         if(!message.toString().equals("")) {
             userService.save(user);
         }
+        log.info("Користувач {}, {} при спробі змінити свою інформацію, отримав результат: {}", user.getUsername(), user.getStatus().getName(), message.toString());
         return Map.of("message", message.toString());
     }
 
@@ -209,11 +216,11 @@ public class UserController {
             } else {
                 message.append("Нічого не змінено. ");
             }
+            log.info("Адміністратор, при спробі змінити інформацію користувача {}, {}, отримав результат: {}", user.getUsername(), user.getStatus().getName(), message.toString());
             return Map.of("message", message.toString());
         } catch(IllegalArgumentException | NullPointerException e) {
-            message = new StringBuilder();
-            message.append(e);
-            return Map.of("errorMessage", message.toString());
+            log.error("{} при спробі змінити інформацію користувача адміністратором", e.getMessage());
+            return Map.of("errorMessage", e.getMessage());
         }
     }
 
@@ -221,7 +228,9 @@ public class UserController {
     public void deleteUser(@PathVariable("id") User user) {
         if(user.getRoom() != null) {
             roomService.takeRoomFromUser(user, user.getRoom());
+            log.info("Користувача {} виселено з кімнати", user.getUsername());
         }
         userService.delete(user);
+        log.info("Користувача {} видалено", user.getUsername());
     }
 }

@@ -2,6 +2,7 @@ package com.studmisto.controllers;
 
 import com.studmisto.entities.NewsItem;
 import com.studmisto.repositories.NewsRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@Slf4j
 @RequestMapping("/news")
 public class NewsController {
     private final NewsRepository newsRepository;
@@ -36,21 +38,24 @@ public class NewsController {
         newsItem.setDescription(description);
         newsItem.setPhotoLink(photoLink);
         newsRepository.save(newsItem);
+        log.info("Доданий елемент NewsItem з заголовком {}", newsItem.getTitle());
         return Map.of("message", "Новину додано");
     }
 
     @PutMapping("{id}")
-    public Map<String, Object> update(@PathVariable("id") NewsItem newsItemOld,
+    public Map<String, Object> update(@PathVariable("id") NewsItem newsItem,
                                       @RequestParam("title") String title,
                                       @RequestParam("description") String description,
                                       @RequestParam("photoLink") String photoLink) {
         try {
-            newsItemOld.setTitle(title);
-            newsItemOld.setDescription(description);
-            newsItemOld.setPhotoLink(photoLink);
-            newsRepository.save(newsItemOld);
+            newsItem.setTitle(title);
+            newsItem.setDescription(description);
+            newsItem.setPhotoLink(photoLink);
+            newsRepository.save(newsItem);
+            log.info("Змінено елемент NewsItem з id {}", newsItem.getId());
             return Map.of("message", "Новину змінено");
         } catch(NullPointerException e) {
+            log.error("NPE при спробі змінити NewsItem з id {}", newsItem.getId());
             return Map.of("errorMessage", "Новину з таким id не знайдено");
         }
     }
@@ -59,8 +64,10 @@ public class NewsController {
     public Map<String, Object> delete(@PathVariable("id") NewsItem newsItem) {
         try {
             newsRepository.delete(newsItem);
+            log.info("Видалено елемент NewsItem з id {}", newsItem.getId());
             return Map.of("message", "Новину видалено");
         } catch (InvalidDataAccessApiUsageException e) {
+            log.error("NPE при спробі видалити NewsItem з id {}", newsItem.getId());
             return Map.of("errorMessage", "Новину з таким id не знайдено");
         }
     }

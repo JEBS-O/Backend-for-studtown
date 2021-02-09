@@ -4,6 +4,7 @@ import com.studmisto.entities.Room;
 import com.studmisto.entities.User;
 import com.studmisto.entities.enums.Dorm;
 import com.studmisto.services.RoomService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@Slf4j
 @RequestMapping("/room")
 public class RoomController {
     private final RoomService roomService;
@@ -86,11 +88,14 @@ public class RoomController {
                 room.setAvailablePlaces(places);
                 room.setGender(null);
                 roomService.addRoom(room);
+                log.info("Додана кімната №{} у {}", room.getRoomNumber(), room.getDorm().getAddress());
                 return Map.of("message", "Кімната додана");
             } else {
+                log.warn("Спроба додати повторно кімнату №{} у {}", roomNumber, dormName);
                 return Map.of("errorMessage", "Кімната вже існує");
             }
         } catch (IllegalArgumentException e) {
+            log.error("{} при спробі додати кімнату №{} у {}", e.getMessage(), roomNumber, dormName);
             return Map.of("errorMessage", e.getMessage());
         }
     }
@@ -103,8 +108,10 @@ public class RoomController {
             room.setPlaces(room.getPlaces() + changer);
             room.setAvailablePlaces(room.getAvailablePlaces() + changer);
             roomService.addRoom(room);
+            log.info("Кількість місць у кімнаті №{} у {} змінено на {}", room.getRoomNumber(), room.getDorm().getAddress(), changer);
             return Map.of("message", "Кількість місць змінено");
-        } catch (Exception e) {
+        } catch (NullPointerException e) {
+            log.error("NPE при спробі змінити кількість місць у кімнаті");
             return Map.of("errorMessage", e.getMessage());
         }
     }
@@ -113,11 +120,14 @@ public class RoomController {
     public Map<String, Object> deleteRoom(@PathVariable("id") Room room) {
         try {
             if (roomService.delete(room)) {
+                log.info("Видалено кімнату №{} у {}", room.getRoomNumber(), room.getDorm().getAddress());
                 return Map.of("message", "Кімната видалена");
             } else {
+                log.warn("Невдала спроба видалити кімнату №{} у {}, в якій проживають", room.getRoomNumber(), room.getDorm().getAddress());
                 return Map.of("errorMessage", "Кімната не може бути видалена, поки в ній проживають");
             }
         } catch (NullPointerException e) {
+            log.error("NPE при спробі видалити кімнату");
             return Map.of("errorMessage", "Кімната з таким id не знайдена");
         }
     }

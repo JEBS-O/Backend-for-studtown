@@ -2,6 +2,7 @@ package com.studmisto.configuration.authorization;
 
 import com.studmisto.entities.User;
 import com.studmisto.repositories.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,6 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
+@Slf4j
 public class AuthorizationRestController {
     private final AuthenticationManager authenticationManager;
     private UserRepository userRepository;
@@ -30,14 +32,17 @@ public class AuthorizationRestController {
         @PostMapping("/login")
         public ResponseEntity<?> authenticate(@RequestParam String email, @RequestParam String password) {
             try {
+                log.info("Надсилання запиту на авторизацію з email {}", email);
                 authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, password));
                 User user = userRepository.findByEmail(email);
                 String token = jwtTokenProvider.createToken(email, user.getRole().name());
                 Map<Object, Object> response = new HashMap<>();
                 response.put("email", email);
                 response.put("token", token);
+                log.info("Успішна спроба аутентифікації з email {}", email);
                 return ResponseEntity.ok(response);
             } catch (AuthenticationException e) {
+                log.error("Невдала спроба аутентифікації з email {}", email);
                 return new ResponseEntity<>("Invalid email/password combination", HttpStatus.FORBIDDEN);
             }
         }

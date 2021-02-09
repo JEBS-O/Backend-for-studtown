@@ -2,6 +2,7 @@ package com.studmisto.controllers;
 
 import com.studmisto.entities.SliderItem;
 import com.studmisto.repositories.SliderRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@Slf4j
 @RequestMapping("/slider")
 public class SliderController {
     private final SliderRepository sliderRepository;
@@ -36,21 +38,24 @@ public class SliderController {
         sliderItem.setDescription(description);
         sliderItem.setPhotoLink(photoLink);
         sliderRepository.save(sliderItem);
+        log.info("Доданий елемент SliderItem з заголовком {}", sliderItem.getTitle());
         return Map.of("message", "Елемент додано");
     }
 
     @PutMapping("{id}")
-    public Map<String, Object> update(@PathVariable("id") SliderItem sliderItemOld,
+    public Map<String, Object> update(@PathVariable("id") SliderItem sliderItem,
                                    @RequestParam("title") String title,
                                    @RequestParam("description") String description,
                                    @RequestParam("photoLink") String photoLink) {
         try {
-            sliderItemOld.setTitle(title);
-            sliderItemOld.setDescription(description);
-            sliderItemOld.setPhotoLink(photoLink);
-            sliderRepository.save(sliderItemOld);
+            sliderItem.setTitle(title);
+            sliderItem.setDescription(description);
+            sliderItem.setPhotoLink(photoLink);
+            sliderRepository.save(sliderItem);
+            log.info("Змінено елемент SliderItem з id {}", sliderItem.getId());
             return Map.of("message", "Елемент додано");
         } catch(NullPointerException e) {
+            log.error("NPE при спробі змінити SliderItem з id {}", sliderItem.getId());
             return Map.of("errorMessage", "Елемент з таким id не знайдено");
         }
     }
@@ -59,8 +64,10 @@ public class SliderController {
     public Map<String, Object> delete(@PathVariable("id") SliderItem sliderItem) {
         try {
             sliderRepository.delete(sliderItem);
+            log.info("Видалено елемент SliderItem з id {}", sliderItem.getId());
             return Map.of("message", "Елемент видалено");
         } catch (InvalidDataAccessApiUsageException e) {
+            log.error("NPE при спробі видалити SliderItem з id {}", sliderItem.getId());
             return Map.of("errorMessage", "Елемент з таким id не знайдено");
         }
     }

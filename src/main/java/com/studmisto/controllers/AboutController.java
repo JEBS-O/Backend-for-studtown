@@ -2,6 +2,7 @@ package com.studmisto.controllers;
 
 import com.studmisto.entities.AboutItem;
 import com.studmisto.repositories.AboutRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@Slf4j
 @RequestMapping("/about")
 public class AboutController {
     private final AboutRepository aboutRepository;
@@ -36,21 +38,24 @@ public class AboutController {
         aboutItem.setDescription(description);
         aboutItem.setIconLink(iconLink);
         aboutRepository.save(aboutItem);
+        log.info("Доданий елемент AboutItem з заголовком {}", aboutItem.getTitle());
         return Map.of("message", "Елемент успішно додано");
     }
 
     @PutMapping("{id}")
-    public Map<String, Object> update(@PathVariable("id") AboutItem aboutItemOld,
+    public Map<String, Object> update(@PathVariable("id") AboutItem aboutItem,
                                   @RequestParam("title") String title,
                                   @RequestParam("description") String description,
                                   @RequestParam("iconLink") String iconLink) {
         try {
-            aboutItemOld.setTitle(title);
-            aboutItemOld.setDescription(description);
-            aboutItemOld.setIconLink(iconLink);
-            aboutRepository.save(aboutItemOld);
+            aboutItem.setTitle(title);
+            aboutItem.setDescription(description);
+            aboutItem.setIconLink(iconLink);
+            aboutRepository.save(aboutItem);
+            log.info("Змінено елемент AboutItem з id {}", aboutItem.getId());
             return Map.of("message", "Елемент успішно змінено");
         } catch(NullPointerException e) {
+            log.error("NPE при спробі змінити AboutItem з id {}", aboutItem.getId());
             return Map.of("errorMessage", "Елемент з таким id не знайдено");
         }
     }
@@ -59,8 +64,10 @@ public class AboutController {
     public Map<String, Object> delete(@PathVariable("id") AboutItem aboutItem) {
         try {
             aboutRepository.delete(aboutItem);
+            log.info("Видалено елемент AboutItem з id {}", aboutItem.getId());
             return Map.of("message", "Елемент видалено");
         } catch(InvalidDataAccessApiUsageException e) {
+            log.error("NPE при спробі видалити AboutItem з id {}", aboutItem.getId());
             return Map.of("errorMessage", "Елемент з таким id не знайдено");
         }
     }
