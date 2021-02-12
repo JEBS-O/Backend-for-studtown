@@ -3,7 +3,6 @@ package com.studmisto.services;
 import com.studmisto.entities.User;
 import com.studmisto.entities.enums.Status;
 import com.studmisto.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -16,12 +15,19 @@ import java.util.Map;
 
 @Service("CustomUserDetailsService")
 public class UserService implements UserDetailsService {
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         return userRepository.findByEmail(s);
+    }
+
+    public List<User> getUsers(Status status) {
+        return userRepository.findUsersByStatus(status);
     }
 
     public Map<String, Object> getBasicUserInfo(User user) {
@@ -83,5 +89,20 @@ public class UserService implements UserDetailsService {
 
     public void delete(User user) {
         userRepository.delete(user);
+    }
+
+    public String generatePassword() {
+        StringBuilder password = new StringBuilder();
+        while(password.toString().length()<10) {
+            int generatedCharacter = (char) (33 + (int) (93 * Math.random()));
+            if ((generatedCharacter >= 48 && generatedCharacter <= 57) || (generatedCharacter >= 65 && generatedCharacter <= 90) || (generatedCharacter >= 97 && generatedCharacter <= 122)) {
+                password.append((char) generatedCharacter);
+            }
+        }
+        return password.toString();
+    }
+
+    public boolean checkEmailUnique(String email) {
+        return userRepository.findByEmail(email) == null;
     }
 }

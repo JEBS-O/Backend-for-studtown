@@ -97,4 +97,13 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    @Override
+    public String toString() {
+        if(getStatus() == Status.WAITING_FOR_ORDER || getStatus() == Status.INMATE) {
+            return getUsername() + " (" + getRoom().getDorm().getAddress() + " | Кімната №" + getRoom().getRoomNumber() + ")";
+        } else {
+            return getUsername() + " (" + getStatus().getName() + ")";
+        }
+    }
 }

@@ -3,6 +3,7 @@ package com.studmisto.controllers;
 import com.studmisto.entities.Room;
 import com.studmisto.entities.User;
 import com.studmisto.entities.enums.*;
+import com.studmisto.services.EmailService;
 import com.studmisto.services.RoomService;
 import com.studmisto.services.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -20,10 +21,12 @@ import java.util.Map;
 public class UserController {
     private final UserService userService;
     private final RoomService roomService;
+    private final EmailService emailService;
 
-    public UserController(UserService userService, RoomService roomService) {
+    public UserController(UserService userService, RoomService roomService, EmailService emailService) {
         this.userService = userService;
         this.roomService = roomService;
+        this.emailService = emailService;
     }
 
     @GetMapping("/principal")
@@ -47,9 +50,12 @@ public class UserController {
                                   @RequestParam("email") String email,
                                   @RequestParam("gender") String gender,
                                   @RequestParam("position") String position,
-                                  @RequestParam("status") String status,
-                                  @RequestParam("password") String password) {
+                                  @RequestParam("status") String status) {
         try {
+            if(!userService.checkEmailUnique(email)) {
+                log.warn("Спроба реєстрації користувача з email, який уже є в базі {}", email);
+                return Map.of("errorMessage", "Користувач з таким email уже існує");
+            }
             User user = new User();
             user.setFirstName(firstName);
             user.setSecondName(secondName);
@@ -58,8 +64,10 @@ public class UserController {
             user.setGender(Gender.getGender(gender));
             user.setRole(Role.ADMIN);
             user.setStatus(Status.getStatus(status));
+            String password = userService.generatePassword();
             user.setPassword(new BCryptPasswordEncoder(12).encode(password));
             userService.save(user);
+            emailService.sendCongratulationForNewUser(email, password);
             log.info("Додана особа адміністрації/персоналу. {} {} {}", user.getUsername(), user.getStatus().getName(), user.getPosition());
             return Map.of("message", "Користувач доданий");
         } catch(IllegalArgumentException | TransactionSystemException e) {
@@ -77,34 +85,40 @@ public class UserController {
                                   @RequestParam("institute") String institute,
                                   @RequestParam("roomNumber") Integer roomNumber,
                                   @RequestParam("dorm") String dorm,
-                                  @RequestParam("password") String password,
                                   @RequestParam("position") String position,
                                   @RequestParam("status") String status,
                                   @RequestParam("balance") Double balance,
                                   @RequestParam("tariff") String tariff) {
         User user = new User();
         try {
-            if(roomService.checkRoomForUser(Gender.getGender(gender), roomService.getRoom(roomNumber, Dorm.getDorm(dorm)))) {
-                user.setFirstName(firstName);
-                user.setSecondName(secondName);
-                user.setEmail(email);
-                user.setGender(Gender.getGender(gender));
-                user.setGroupName(groupName);
-                user.setInstitute(Institute.getInstitute(institute));
-                user.setStatus(Status.getStatus(status));
-                user.setPosition(position);
-                user.setRoom(roomService.giveRoomForUser(Gender.getGender(gender), roomService.getRoom(roomNumber, Dorm.getDorm(dorm))));
-                user.setBalance(balance);
-                user.setTariff(Tariff.getTariff(tariff));
-                user.setRole(Role.USER);
-                user.setPassword(new BCryptPasswordEncoder(12).encode(password));
-                userService.save(user);
-                log.info("Доданий уже існуючий мешканець гуртожитку. {}, {}, кімната №{}", user.getUsername(), user.getRoom().getDorm().getAddress(), user.getRoom().getRoomNumber());
-                return Map.of("message", "Користувач доданий");
-            } else {
+            if(!userService.checkEmailUnique(email)) {
+                log.warn("Спроба реєстрації користувача з email, який уже є в базі {}", email);
+                return Map.of("errorMessage", "Користувач з таким email уже існує");
+            }
+            Room room = roomService.getRoom(roomNumber, Dorm.getDorm(dorm));
+            Gender userGender = Gender.getGender(gender);
+            if(!roomService.checkRoomForUser(userGender, room)) {
                 log.warn("Перевірка кімнати показала, що для користувача {}, {}, кімната №{} недоступна", user.getUsername(), user.getRoom().getDorm().getAddress(), user.getRoom().getRoomNumber());
                 return Map.of("errorMessage", "Користувач не може бути заселений у дану кімнату");
             }
+            user.setFirstName(firstName);
+            user.setSecondName(secondName);
+            user.setEmail(email);
+            user.setGender(userGender);
+            user.setGroupName(groupName);
+            user.setInstitute(Institute.getInstitute(institute));
+            user.setStatus(Status.getStatus(status));
+            user.setPosition(position);
+            user.setRoom(roomService.giveRoomForUser(userGender, room));
+            user.setBalance(balance);
+            user.setTariff(Tariff.getTariff(tariff));
+            user.setRole(Role.USER);
+            String password = userService.generatePassword();
+            user.setPassword(new BCryptPasswordEncoder(12).encode(password));
+            userService.save(user);
+            emailService.sendCongratulationForNewUser(email, password);
+            log.info("Доданий уже існуючий мешканець гуртожитку. {}, {}, кімната №{}", user.getUsername(), user.getRoom().getDorm().getAddress(), user.getRoom().getRoomNumber());
+            return Map.of("message", "Користувач доданий");
         } catch(NullPointerException | IllegalArgumentException | TransactionSystemException e) {
             if(user.getRoom() != null) {
                 roomService.takeRoomFromUser(user, user.getRoom());
