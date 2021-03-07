@@ -9,6 +9,7 @@ Languages & Technologies:
 - PostrgeSQL
 - Log4j
 - SMPT
+- Flyway
 
 Functionality: 
 - authentication using JWT token
@@ -16,3 +17,4 @@ Functionality:
 - messaging
 - sending emails
 - admin console
+- room functionality
