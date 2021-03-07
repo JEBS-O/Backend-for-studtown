@@ -1,0 +1,2 @@
+INSERT INTO users (id, email, first_name, gender, password, position, role, second_name, status)
+    VALUES (1, 'oleh.buchynskyi@gmail.com', 'Олег', 'MAN', '$2y$12$eJjciLNa.e5enAtClW4wwerXvoFDXfZS.ZLDYbcRchwr.5RjI8cBO', 'Розробник бек-енд частини сайту', 'ADMIN', 'Бучинський', 'ADMINISTRATION');

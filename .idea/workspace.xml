@@ -2,26 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8c197dc-140e-4c3f-b4be-a86c171e8ab3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/configuration/MailSenderConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a/storage_v2/_src_/database/studmisto.YmDVig/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1ee9946-e7e8-48dc-921b-8a63bdc9588a/storage_v2/_src_/database/studmisto.YmDVig/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log4j2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/REST DOCUMENTATION FOR STUDMISTO BACKEND.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/REST DOCUMENTATION FOR STUDMISTO BACKEND.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/studmisto/services/AppealService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/studmisto/services/AppealService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/repositories/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/services/AppealService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/services/AppealService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studmisto/services/AppealService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studmisto/services/AppealService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,26 +71,6 @@
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="studmisto@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="studmisto: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="appeals: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="studmisto@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="studmisto: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="messages: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
     </expand>
     <select />
   </component>
@@ -107,8 +78,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -132,7 +103,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../takeMyHand" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -142,6 +113,9 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.studmisto" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\studmistobackend\src\main\resources\db\migration" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -251,7 +225,21 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b00f15b7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4a6f4b61" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4a6f4b61" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@dee684f7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@23e3a974" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@23e3a974" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7ac59af4" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -287,7 +275,12 @@
       <workItem from="1612685769237" duration="6982000" />
       <workItem from="1612790668438" duration="3545000" />
       <workItem from="1612865143078" duration="21940000" />
-      <workItem from="1613029331106" duration="15380000" />
+      <workItem from="1613029331106" duration="20417000" />
+      <workItem from="1613387631030" duration="2269000" />
+      <workItem from="1613468928288" duration="10451000" />
+      <workItem from="1615022445222" duration="611000" />
+      <workItem from="1615038339045" duration="5154000" />
+      <workItem from="1615050748584" duration="1520000" />
     </task>
     <servers />
   </component>
