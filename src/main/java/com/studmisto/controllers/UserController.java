@@ -45,6 +45,7 @@ public class UserController {
     }
 
     @PostMapping("/addStaff")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> addStaff(@RequestParam("firstName") String firstName,
                                   @RequestParam("secondName") String secondName,
                                   @RequestParam("email") String email,
@@ -77,6 +78,7 @@ public class UserController {
     }
 
     @PostMapping("/addExistInmate")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> addExistInmate(@RequestParam("firstName") String firstName,
                                   @RequestParam("secondName") String secondName,
                                   @RequestParam("email") String email,
@@ -165,6 +167,7 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> updateUser(@PathVariable("id") User user,
                                           @RequestParam(value = "institute", required = false, defaultValue = "") String institute,
                                           @RequestParam(value = "groupName", required = false, defaultValue = "") String groupName,
@@ -239,6 +242,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public void deleteUser(@PathVariable("id") User user) {
         if(user.getRoom() != null) {
             roomService.takeRoomFromUser(user, user.getRoom());

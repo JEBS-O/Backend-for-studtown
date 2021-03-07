@@ -5,6 +5,7 @@ import com.studmisto.entities.enums.ContactCategory;
 import com.studmisto.repositories.ContactRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.TransactionSystemException;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,6 +34,7 @@ public class ContactController {
     }
 
     @PostMapping
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> add(@RequestParam(name = "category") String categoryName,
                                    @RequestParam(name = "name") String name,
                                    @RequestParam(name = "position") String position,
@@ -62,6 +64,7 @@ public class ContactController {
     }
 
     @PutMapping("{id}")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> update(@PathVariable("id") ContactItem contactItem,
                                       @RequestParam(name = "address") String address,
                                       @RequestParam(name = "email") String email,
@@ -85,6 +88,7 @@ public class ContactController {
     }
 
     @DeleteMapping("{id}")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> delete(@PathVariable("id") ContactItem contactItem) {
         try {
             contactRepository.delete(contactItem);

@@ -4,6 +4,7 @@ import com.studmisto.entities.AboutItem;
 import com.studmisto.repositories.AboutRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,6 +31,7 @@ public class AboutController {
     }
 
     @PostMapping
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> add(@RequestParam("title") String title,
                                    @RequestParam("description") String description,
                                    @RequestParam("iconLink") String iconLink) {
@@ -43,6 +45,7 @@ public class AboutController {
     }
 
     @PutMapping("{id}")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> update(@PathVariable("id") AboutItem aboutItem,
                                   @RequestParam("title") String title,
                                   @RequestParam("description") String description,
@@ -61,6 +64,7 @@ public class AboutController {
     }
 
     @DeleteMapping("{id}")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> delete(@PathVariable("id") AboutItem aboutItem) {
         try {
             aboutRepository.delete(aboutItem);

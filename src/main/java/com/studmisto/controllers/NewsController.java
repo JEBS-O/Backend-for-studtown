@@ -30,6 +30,7 @@ public class NewsController {
     }
 
     @PostMapping
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> add(@RequestParam("title") String title,
                                    @RequestParam("description") String description,
                                    @RequestParam("photoLink") String photoLink) {
@@ -43,6 +44,7 @@ public class NewsController {
     }
 
     @PutMapping("{id}")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> update(@PathVariable("id") NewsItem newsItem,
                                       @RequestParam("title") String title,
                                       @RequestParam("description") String description,
@@ -61,6 +63,7 @@ public class NewsController {
     }
 
     @DeleteMapping("{id}")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> delete(@PathVariable("id") NewsItem newsItem) {
         try {
             newsRepository.delete(newsItem);

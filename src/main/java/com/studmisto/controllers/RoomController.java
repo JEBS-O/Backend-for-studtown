@@ -74,6 +74,7 @@ public class RoomController {
     }
 
     @PostMapping
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> addRoom(@RequestParam("roomNumber") Integer roomNumber,
                                        @RequestParam("dorm") String dormName,
                                        @RequestParam("stage") Integer stage,
@@ -101,6 +102,7 @@ public class RoomController {
     }
 
     @PutMapping("/{id}")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> changeRoom(@PathVariable("id") Room room,
                                           @RequestParam("places") Integer places) {
         try {
@@ -117,6 +119,7 @@ public class RoomController {
     }
 
     @DeleteMapping("/{id}")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> deleteRoom(@PathVariable("id") Room room) {
         try {
             if (roomService.delete(room)) {

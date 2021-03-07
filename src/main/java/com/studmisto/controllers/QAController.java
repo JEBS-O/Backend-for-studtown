@@ -30,6 +30,7 @@ public class QAController {
     }
 
     @PostMapping
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> add(@RequestParam("question") String question,
                                    @RequestParam("answer") String answer) {
         QAItem qaItem = new QAItem();
@@ -41,6 +42,7 @@ public class QAController {
     }
 
     @PutMapping("{id}")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> update(@PathVariable("id") QAItem qaItem,
                                       @RequestParam("question") String question,
                                       @RequestParam("answer") String answer) {
@@ -57,6 +59,7 @@ public class QAController {
     }
 
     @DeleteMapping("{id}")
+    //@PreAuthorize("hasAuthority('ADMIN')")
     public Map<String, Object> delete(@PathVariable("id") QAItem qaItem) {
         try {
             qaRepository.delete(qaItem);
